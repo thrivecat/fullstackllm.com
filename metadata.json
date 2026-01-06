@@ -1,0 +1,8 @@
+{
+  "name": "FullStackLLM.com",
+  "description": "Premium B2B SaaS for turnkey hosted open-source LLM deployments with white-labeled chat interfaces.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
