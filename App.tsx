@@ -205,12 +205,6 @@ export default function App() {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      setIsDark(true);
-    }
-  }, []);
-
-  useEffect(() => {
     if (isDark) {
       document.documentElement.classList.add('dark');
     } else {
