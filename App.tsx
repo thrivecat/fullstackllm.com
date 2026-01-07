@@ -31,6 +31,17 @@ import Cookies from './pages/Cookies';
 // Components
 import { NAV_ITEMS } from './constants';
 
+// Scroll to top on route change
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
 const Navbar = ({ toggleTheme, isDark }: { toggleTheme: () => void, isDark: boolean }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -216,6 +227,7 @@ export default function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-white dark:bg-dark selection:bg-primary/10 selection:text-primary">
         <Navbar toggleTheme={toggleTheme} isDark={isDark} />
         <main>
